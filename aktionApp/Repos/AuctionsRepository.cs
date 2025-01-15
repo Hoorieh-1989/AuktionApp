@@ -15,11 +15,11 @@ namespace aktionApp.Repos
             _connectionString = configuration.GetConnectionString("DefaultConnection");
         }
 
-        public async Task<IEnumerable<Auction>> GetAllAuctionsAsync()
+        public async Task<IEnumerable<Auctions>> GetAllAuctionsAsync()
         {
             using (var connection = new SqlConnection(_connectionString))
             {
-                return await connection.QueryAsync<Auction>("sp_GetAllAuctions", commandType: CommandType.StoredProcedure);
+                return await connection.QueryAsync<Auctions>("sp_GetAllAuctions", commandType: CommandType.StoredProcedure);
             }
         }
 

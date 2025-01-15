@@ -9,5 +9,6 @@ namespace aktionApp.Entities.Interfaces
         Task UpdateUserAsync(Users user);
         Task DeleteUserAsync(int userId);
         Task<Users?> AuthenticateAsync(string username, string password);
+        Task GetUserByUsernameAsync(object username);
     }
 }

@@ -18,7 +18,7 @@ namespace AuktionApp.Controllers
             _auctionRepository = auctionRepository;
         }
 
-        //Hämta alla auktioner
+        //Hämta en auktion med ID
         [HttpGet]
         public async Task<IActionResult> GetAllAuctions()
         {
@@ -29,7 +29,7 @@ namespace AuktionApp.Controllers
         //Skapa en ny auktion
         [HttpPost]
         [Authorize] //Kräver inloggning
-        public async Task<IActionResult> CreateAuction(AuctionCreateDto auctionDto)
+        public async Task<IActionResult> CreateAuction(AuctionsDto auctionDto)
         {
             //Skapa ett nytt auktionsobjekt
             var auction = new Auction

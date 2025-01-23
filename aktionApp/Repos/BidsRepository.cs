@@ -21,10 +21,7 @@ namespace aktionApp.Repos
                 {
                     return await connection.QueryAsync<Bids>("sp_GetAllBids", commandType: CommandType.StoredProcedure);
                 }
-            }
-
-            
+            }          
         
-
     }
 }

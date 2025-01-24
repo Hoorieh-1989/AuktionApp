@@ -1,4 +1,6 @@
-﻿using aktionApp.Entities.Interfaces;
+﻿using aktionApp.DTOs;
+using aktionApp.Entities;
+using aktionApp.Entities.Interfaces;
 using aktionApp.Repos;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -32,13 +34,13 @@ namespace AuktionApp.Controllers
         public async Task<IActionResult> CreateAuction(AuctionsDto auctionDto)
         {
             //Skapa ett nytt auktionsobjekt
-            var auction = new Auction
+            var auction = new Auctions
             {
                 Title = auctionDto.Title,
                 Description = auctionDto.Description,
                 Price = auctionDto.Price,
-                StartDate = auctionDto.StartDate,
-                EndDate = auctionDto.EndDate,
+                StartDateTime = auctionDto.StartDateTime,
+                EndDateTime = auctionDto.EndDateTime,
                 CreatedByUserId = auctionDto.CreatedByUserId
             };
 

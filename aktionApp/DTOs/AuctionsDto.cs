@@ -8,5 +8,6 @@
         public DateTime StartDateTime { get; set; }
         public DateTime EndDateTime { get; set; }
         public int CategoryId { get; set; }
+        public int CreatedByUserId { get; set; }
     }
 }
